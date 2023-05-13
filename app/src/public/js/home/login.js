@@ -14,20 +14,21 @@ const id = document.querySelector("#id"),
             psword : psword.value,
         };
 
-        fetch("/login", {
+        fetch('/login', 
+        {
             method : "POST",
             headers : {
                 "Content-Type" : "application/json",
             },
             body : JSON.stringify(req),
         })
-        .then((res)=>res.json())
-        .then((res)=>{
-            if(res.sucsess) {
-                location.href = "/";
-            }else{
-                alert(res.msg);
-            }
+            .then((res)=>res.json())
+            .then((res)=>{
+                if(res.succsess) {
+                    location.href = "/";
+                } else {
+                   alert(res.msg);
+                }
         })
         .catch((err)=>{
             console.error("로그인 중 에러 발생");

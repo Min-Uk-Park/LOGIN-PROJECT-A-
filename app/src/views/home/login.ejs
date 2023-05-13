@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/home/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/js/home/login.js" defer> </script>
     <title>Document</title>
 </head>
 <body>
-    <input id="id" type="text" placeholder="ID"><br>
-    <input id="psword" type="text" placeholder="PW"><br>
-    <button>로그인</button>
+    <div class="login">
+        <h1>Login</h1>
+        <form method="post">
+            <input id="id" type="text" name="u" placeholder="ID" required="required" />
+            <input id ="psword" type="password" name="p" placeholder="Password" required="required" />
+            <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+        </form>
+    </div>
 </body>
+
 </html>
+
+<!--Copyright (c) 2023 by Tyler Fry (https://codepen.io/frytyler/pen/nJYVEO)-->
